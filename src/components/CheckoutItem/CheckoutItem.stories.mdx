@@ -1,0 +1,62 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import CheckoutItem from './CheckoutItem';
+
+import { addItemToCart, removeItemFromCart } from '../../utils.js';
+
+import CheckoutItemDescription from './CheckoutItem.description.md';
+
+<CheckoutItemDescription />
+
+<Meta
+  title="components/CheckoutItem"
+  component={CheckoutItem}
+  argTypes={{
+    addItemToCart: {
+      table: {
+        disable: true
+      }
+    },
+    removeItemFromCart: {
+      table: {
+        disable: true
+      }
+    }
+  }}
+/>
+
+<Canvas>
+  <Story
+    name="CheckoutItem Single"
+    args={{
+      name: 'Exclusive Bonsai',
+      count: 1,
+      price: 100,
+      addItemToCart: addItemToCart,
+      removeItemFromCart: removeItemFromCart
+    }}
+  >
+    {(args) => <CheckoutItem {...args} />}
+  </Story>
+  <Story
+    name="CheckoutItem Multiple"
+    args={{
+      name: 'Monstera',
+      count: 3,
+      price: 250,
+      addItemToCart: addItemToCart,
+      removeItemFromCart: removeItemFromCart
+    }}
+  >
+    {(args) => (
+      <>
+        <CheckoutItem {...args} />
+        <CheckoutItem {...args} />
+      </>
+    )}
+  </Story>
+</Canvas>
+
+## ArgsTable
+
+<ArgsTable of={CheckoutItem} />
