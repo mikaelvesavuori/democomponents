@@ -35,20 +35,19 @@
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
     "@babel/preset-react": "latest",
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/react": "^6.3.4",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/react": "^6.3.8",
     "babel-loader": "latest",
     "babel-plugin-module-resolver": "latest",
     "chromatic": "5",
     "eslint": "latest",
-    "figmagic": "4",
+    "figmagic": "4.3.3",
     "file-loader": "6",
     "prettier": "latest",
     "webpack": "^4",
     "webpack-cli": "4",
     "webpack-dev-server": "3"
-  },
-  "dependencies": {}
+  }
 }
